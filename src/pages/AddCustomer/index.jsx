@@ -44,7 +44,7 @@ const AddCustomer = () => {
 
   return (
     <>
-      <h1 className="text-[#000] text-[26px] mt-[20px] font-bold">
+      <h1 className="text-[#000] text-[26px] ml-[32px] mt-[20px] font-bold">
         Yeni müştəri əlave et
       </h1>
       <AnimatePresence>
@@ -60,64 +60,66 @@ const AddCustomer = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="bg-[#FFF] w-[1170px] p-[20px] rounded-2xl mt-[30px] relative">
-        <div className="">
-          <form method="get" onSubmit={SubmitShow}>
-            <div className="grid grid-cols-2 gap-y-5">
+      <div className="flex justify-center  ml-[-20px]">
+        <div className="bg-[#FFF] w-[1170px] p-[20px] rounded-2xl mt-[30px] relative">
+          <div className="">
+            <form method="get" onSubmit={SubmitShow}>
+              <div className="grid grid-cols-2 gap-y-5">
+                <div className="">
+                  <h1>Ad</h1>
+                  <input
+                    value={Name}
+                    onChange={(e) => SetName(e.target.value)}
+                    type="text"
+                    className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  />
+                </div>
+                <div className="">
+                  <h1>Soyad</h1>
+                  <input
+                    value={Surname}
+                    onChange={(e) => SetSurname(e.target.value)}
+                    type="text"
+                    className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  />
+                </div>
+                <div className="">
+                  <h1>Telefon Nömrəsi</h1>
+                  <input
+                    value={Number}
+                    onChange={(e) => SetNumber(e.target.value)}
+                    type="number"
+                    className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  />
+                </div>
+                <div className="">
+                  <h1>Şöbə</h1>
+                  <input
+                    value={Department}
+                    onChange={(e) => SetDepartment(e.target.value)}
+                    type="text"
+                    className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  />
+                </div>
+              </div>
               <div className="">
-                <h1>Ad</h1>
-                <input
-                  value={Name}
-                  onChange={(e) => SetName(e.target.value)}
+                <h1>Qeydler</h1>
+                <textarea
+                  value={Note}
+                  onChange={(e) => SetNote(e.target.value)}
                   type="text"
-                  className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  className="outline-1 p-[10px] outline-[#aaaaaa] rounded-[5px] w-[1100px] h-[80px] resize-none"
                 />
               </div>
-              <div className="">
-                <h1>Soyad</h1>
+              <div className="flex justify-end">
                 <input
-                  value={Surname}
-                  onChange={(e) => SetSurname(e.target.value)}
-                  type="text"
-                  className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
+                  type="submit"
+                  value={"Göndər"}
+                  className="bg-purple-700 p-[10px_30px] rounded-[10px] text-[#fff] mt-[20px] mr-[30px]"
                 />
               </div>
-              <div className="">
-                <h1>Telefon Nömrəsi</h1>
-                <input
-                  value={Number}
-                  onChange={(e) => SetNumber(e.target.value)}
-                  type="number"
-                  className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
-                />
-              </div>
-              <div className="">
-                <h1>Şöbə</h1>
-                <input
-                  value={Department}
-                  onChange={(e) => SetDepartment(e.target.value)}
-                  type="text"
-                  className="outline-1 p-[0px_10px] outline-[#aaaaaa] rounded-[5px] w-[535px] h-[40px]"
-                />
-              </div>
-            </div>
-            <div className="">
-              <h1>Qeydler</h1>
-              <textarea
-                value={Note}
-                onChange={(e) => SetNote(e.target.value)}
-                type="text"
-                className="outline-1 p-[10px] outline-[#aaaaaa] rounded-[5px] w-[1100px] h-[80px] resize-none"
-              />
-            </div>
-            <div className="flex justify-end">
-              <input
-                type="submit"
-                value={"Göndər"}
-                className="bg-purple-700 p-[10px_30px] rounded-[10px] text-[#fff] mt-[20px] mr-[30px]"
-              />
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </>
