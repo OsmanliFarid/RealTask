@@ -21,14 +21,13 @@ const AddCustomer = () => {
       note: Note,
       status: false,
     };
-
-    axios.post(url + "/customer", newARR).then((red) => {
-      if (
-        Name.length > 0 &&
-        Surname.length > 0 &&
-        Number.length > 0 &&
-        Department.length > 0
-      ) {
+    if (
+      Name.length > 0 &&
+      Surname.length > 0 &&
+      Number.length > 0 &&
+      Department.length > 0
+    ) {
+      axios.post(url + "/customer", newARR).then((red) => {
         console.log(red);
         SetName("");
         SetSurname("");
@@ -37,14 +36,16 @@ const AddCustomer = () => {
         SetNote("");
         setIsSuccess(true);
         setTimeout(() => setIsSuccess(false), 3000);
-      }
-    });
+      });
+    } else {
+      alert("formu düzgün doldurun");
+    }
   };
 
   return (
     <>
       <h1 className="text-[#000] text-[26px] mt-[20px] font-bold">
-        Yeni musteri elave et
+        Yeni müştəri əlave et
       </h1>
       <AnimatePresence>
         {isSuccess && (
@@ -82,7 +83,7 @@ const AddCustomer = () => {
                 />
               </div>
               <div className="">
-                <h1>Telefon Nomresi</h1>
+                <h1>Telefon Nömrəsi</h1>
                 <input
                   value={Number}
                   onChange={(e) => SetNumber(e.target.value)}
@@ -91,7 +92,7 @@ const AddCustomer = () => {
                 />
               </div>
               <div className="">
-                <h1>Sobe</h1>
+                <h1>Şöbə</h1>
                 <input
                   value={Department}
                   onChange={(e) => SetDepartment(e.target.value)}
@@ -102,16 +103,17 @@ const AddCustomer = () => {
             </div>
             <div className="">
               <h1>Qeydler</h1>
-              <input
+              <textarea
                 value={Note}
                 onChange={(e) => SetNote(e.target.value)}
                 type="text"
-                className="outline-1 p-[0px] outline-[#aaaaaa] rounded-[5px] w-[1100px] h-[80px]"
+                className="outline-1 p-[10px] outline-[#aaaaaa] rounded-[5px] w-[1100px] h-[80px] resize-none"
               />
             </div>
             <div className="flex justify-end">
               <input
                 type="submit"
+                value={"Göndər"}
                 className="bg-purple-700 p-[10px_30px] rounded-[10px] text-[#fff] mt-[20px] mr-[30px]"
               />
             </div>

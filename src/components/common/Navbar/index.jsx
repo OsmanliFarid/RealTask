@@ -10,16 +10,13 @@ const Navbar = () => {
           CRM Paneli
         </h1>
 
-        <Link
-          to={"/all-customer"}
-          className="flex gap-5 items-center cursor-pointer pt-4"
-        >
+        <Link to={"/"} className="flex gap-5 items-center cursor-pointer pt-4">
           <FaUserPlus className="text-white text-[20px]" />
           <span className="text-white">Yeni müştəri əlavə et</span>
         </Link>
 
         <Link
-          to={"/addcustomer"}
+          to={"/all-customer"}
           className="flex gap-5 items-center cursor-pointer pt-6"
         >
           <FaUsers className="text-white text-[20px]" />
