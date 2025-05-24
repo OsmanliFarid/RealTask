@@ -10,7 +10,10 @@ const Navbar = () => {
           CRM Paneli
         </h1>
 
-        <Link to={"/"} className="flex gap-5 items-center cursor-pointer pt-4">
+        <Link
+          to={"/"}
+          className="flex gap-3 items-center cursor-pointer transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a]"
+        >
           <FaUserPlus className="text-white text-[20px]" />
           <span className="text-white">Yeni müştəri əlavə et</span>
         </Link>
