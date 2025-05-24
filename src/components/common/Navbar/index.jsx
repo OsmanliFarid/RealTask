@@ -12,12 +12,10 @@ const Navbar = () => {
 
         <Link
           to={"/"}
-          className="flex gap-3 items-center cursor-pointer transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a] hover:text-red-700"
+          className="flex gap-3 items-center cursor-pointer transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a]"
         >
           <FaUserPlus className="text-white text-[20px] " />
-          <span className="text-white hover:text-red-700">
-            Yeni müştəri əlavə et
-          </span>
+          <span className="text-white">Yeni müştəri əlavə et</span>
         </Link>
 
         <Link
