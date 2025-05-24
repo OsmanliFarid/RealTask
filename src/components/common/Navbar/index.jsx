@@ -14,13 +14,13 @@ const Navbar = () => {
           to={"/"}
           className="flex gap-3 items-center cursor-pointer transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a]"
         >
-          <FaUserPlus className="text-white text-[20px]" />
+          <FaUserPlus className="text-white text-[20px] " />
           <span className="text-white">Yeni müştəri əlavə et</span>
         </Link>
 
         <Link
           to={"/all-customer"}
-          className="flex gap-5 items-center cursor-pointer pt-6"
+          className="flex gap-3 items-center cursor-pointer mt-[16px] transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a]"
         >
           <FaUsers className="text-white text-[20px]" />
           <span className="text-white">Bütün müştərilər</span>
@@ -28,7 +28,7 @@ const Navbar = () => {
 
         <Link
           to={"/arcive"}
-          className="flex gap-5 items-center cursor-pointer pt-6"
+          className="flex gap-3 items-center cursor-pointer mt-[16px] transition-all duration-300 rounded-md p-[8px_10px] hover:bg-[#9c9a9a]"
         >
           <FaUserPlus className="text-white text-[20px]" />
           <span className="text-white">Arxiv</span>
